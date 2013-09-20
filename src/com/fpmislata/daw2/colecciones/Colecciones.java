@@ -115,14 +115,15 @@ public class Colecciones {
         Coche cocheDeDni = mapCoches.get(dniCoche);
         System.out.println("Modelo: " + cocheDeDni.getModelo());
         System.out.println(" ");
-        
+
         System.out.println(" ");
         System.out.println("Coche marca FORD");
-        Coche cocheFord = mapCoches.get(dniCoche);
-        if(cocheFord.getMarca() == Marca.FORD){
-            System.out.println("DNI: " + cocheFord.getDniPropietario() + "\nModelo: " + cocheFord.getModelo() + "\nMarca: " + cocheFord.getMarca() + "\nCilindrada: " + cocheFord.getCilindrada());
 
+        for (String dni : dnis) {
+            Coche cocheFord = mapCoches.get(dni);
+            if (cocheFord.getMarca() == Marca.FORD) {
+                System.out.println("DNI: " + cocheFord.getDniPropietario() + "\nModelo: " + cocheFord.getModelo() + "\nMarca: " + cocheFord.getMarca() + "\nCilindrada: " + cocheFord.getCilindrada());
+            }
         }
     }
 }
-
