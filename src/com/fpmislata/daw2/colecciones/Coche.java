@@ -1,22 +1,32 @@
 package com.fpmislata.daw2.colecciones;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Coche {
 
     private Marca marca;
     private String modelo;
     private int cilindrada;
-    private String dniPropietario;
+    private Persona propietario;
 
     public Coche() {
     }
-    
-    public Coche(String dniPropietario,String modelo,Marca marca,int cilindrada) {
-    
-        this.dniPropietario=dniPropietario;
-        this.modelo=modelo;
-        this.marca=marca;
-        this.cilindrada=cilindrada;
-        
+
+    public Coche(String modelo, Marca marca, int cilindrada) {
+
+        this.modelo = modelo;
+        this.marca = marca;
+        this.cilindrada = cilindrada;
+
+    }
+
+    public Persona getPropietario() {
+        return propietario;
+    }
+
+    public void setPropietario(Persona propietario) {
+        this.propietario = propietario;
     }
 
     public Marca getMarca() {
@@ -41,13 +51,5 @@ public class Coche {
 
     public void setCilindrada(int cilindrada) {
         this.cilindrada = cilindrada;
-    }
-
-    public String getDniPropietario() {
-        return dniPropietario;
-    }
-
-    public void setDniPropietario(String dniPropietario) {
-        this.dniPropietario = dniPropietario;
     }
 }
